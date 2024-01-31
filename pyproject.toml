@@ -1,6 +1,29 @@
-[build-system]
-requires = [
-    "setuptools>=42",
-    "wheel"
+[tool.poetry]
+name = "grad-cam"
+version = "1.5.0"
+description = "Many Class Activation Map methods implemented in Pytorch for classification, segmentation, object detection and more"
+authors = ["Jacob Gildenblat <jacob.gildenblat@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{ include = "pytorch_grad_cam" }]
+classifiers = [
+    'Programming Language :: Python :: 3',
+    'License :: OSI Approved :: MIT License',
+    'Operating System :: OS Independent',
 ]
-build-backend = "setuptools.build_meta"
+
+[tool.poetry.dependencies]
+torch = ">=1.7.1"
+torchvision = ">=0.8.2"
+python = ">=3.8"
+numpy = "*"
+Pillow = "*"
+ttach = "*"
+tqdm = "*"
+opencv-python-headless = "*"
+matplotlib = "*"
+scikit-learn = "*"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
